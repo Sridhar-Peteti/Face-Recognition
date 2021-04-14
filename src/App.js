@@ -78,7 +78,7 @@ class App extends Component {
     }
 
     onButtonSubmit =() => {
-      this.setState({imageUrl: this.state.input})
+      this.setState({imageUrl: this.state.input});
       fetch('https://ancient-dawn-79142.herokuapp.com/imageurl',{
         method: 'post',
         headers: {'content-Type': 'application/json'},
@@ -87,7 +87,6 @@ class App extends Component {
         })
       })
       .then(response => response.json())
-        
       .then(response => {
         if(response){
           fetch('http:/localhost:3000/image',{
